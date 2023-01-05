@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./static/style/style.css">
-        <title>Document</title>
-    </head>
-    <body>
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego </title>
+    <link rel="stylesheet" href="./static/style/style.css" />
+</head>
+
+<body>
+
+    <div class="wrapper">
         <h1>Pick one</h1>
-        <section class="opcionesJuego">
-            <div class="opcion " id="opcionRock">
-                <img src="./static/images/rock.png" alt="Rock">
-                <p class="nameOpcion">Rock</p>
-            </div>
-            <div class="opcion " id="opcionPaper">
-                <img src="./static/images/paper.png" alt="Paper">
-                <p class="nameOpcion">Paper</p>
-            </div>
-            <div class="opcion" id="opcionscissors">
-                <img src="./static/images/scissors.png" alt="scissors">
-                <p class="nameOpcion">scissors</p>
-            </div>
-        </section>
-            
-    </body>
+        <ul>
+            <li class="pick-one">
+                <button>
+                    <img src="./static/images/rock.png" alt="Rock" />
+                    rock
+                </button>
+            </li>
+            <li class="pick-one">
+                <button>
+                    <img src="./static/images/paper.png" alt="Paper" />
+                    paper
+                </button>
+            </li>
+            <li class="pick-one">
+                <button>
+                    <img src="./static/images/scissors.png" alt="Scissors" />
+                    scissors
+                </button>
+            </li>
+        </ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+
 </html>
