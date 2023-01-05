@@ -54,17 +54,30 @@ function winner(pc,player){
         }
     }
 
-    showResult(winner)
+    showResult(winner,player,pc)
 
 
 }
 
-function showResult(winner){
+function showResult(winner,player,pc){
+    
 
     wrapper.classList.add('oculto')
     Containerwinner.classList.remove('oculto')
 
     winnerTitle.textContent=winner
+
+    playerPickIMG.src=InformationPlay[player]
+    playerPickIMG.attributes[1].textContent=player
+
+    pcPickIMG.src=InformationPlay[pc]
+
+    pcPickIMG.attributes[1].textContent=pc
+    
+
+
+
+
 
     btnAgain.addEventListener('click',()=>{
         // recargar pagina js
