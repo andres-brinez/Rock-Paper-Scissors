@@ -2,9 +2,9 @@
 
 const jugadas=['rock','paper','scissors']
 const InformationPlay={
-    rock:'../images/rock.png',
-    paper:'../images/paper.png',
-    scissors:'../images/scissors.png'
+    rock:'./static/images/rock.png',
+    paper:'./static/images/paper.png',
+    scissors:'./static/images/scissors.png'
 }
 
 
@@ -65,7 +65,25 @@ function showResult(winner,player,pc){
     wrapper.classList.add('oculto')
     Containerwinner.classList.remove('oculto')
 
-    winnerTitle.textContent=winner
+    if (winner==='player'){
+        Containerwinner.classList.add('you-win')
+        winnerTitle.textContent= '🥳 You win 🥳'
+        
+    }
+    else if (winner=='pc'){
+
+        Containerwinner.classList.add('computer-wins')
+        winnerTitle.textContent= '🤖 Computer wins 🖥️'
+    }
+
+    else{
+        winnerTitle.textContent= '🙄 Empate 😯 '
+    }
+
+
+    winnerTitle.classList.add(winner)
+
+    
 
     playerPickIMG.src=InformationPlay[player]
     playerPickIMG.attributes[1].textContent=player
