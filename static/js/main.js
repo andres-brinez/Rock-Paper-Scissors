@@ -1,10 +1,10 @@
 
 
-const jugadas=['rock','paper','scissors']
+const jugadas=['Rock','Paper','Scissors']
 const InformationPlay={
-    rock:'./static/images/rock.png',
-    paper:'./static/images/paper.png',
-    scissors:'./static/images/scissors.png'
+    Rock:'./static/images/rock.png',
+    Paper:'./static/images/paper.png',
+    Scissors:'./static/images/scissors.png'
 }
 
 
@@ -29,25 +29,25 @@ function winner(pc,player){
 
     }
 
-    else if(pc==='rock'){
-        if(player==='paper'){
+    else if(pc==='Rock'){
+        if(player==='Paper'){
             winner= 'player'
         }else{
             winner='pc'
         }
     }
 
-    else if(pc==='paper'){
-        if(player==='scissors'){
-            winner= 'player'
+    else if(pc==='Paper'){
+        if(player==='Scissors'){
+            winner= 'Player'
         }else{
             winner= 'pc'
         }
     }
 
 
-    else if(pc==='scissors'){
-        if(player==='rock'){
+    else if(pc==='Scissors'){
+        if(player==='Rock'){
             return 'player'
         }else{
             return 'pc'
@@ -81,15 +81,14 @@ function showResult(winner,player,pc){
     }
 
 
-    winnerTitle.classList.add(winner)
 
-    
+    console.log(player)
+    console.log(InformationPlay[player])
 
     playerPickIMG.src=InformationPlay[player]
     playerPickIMG.attributes[1].textContent=player
 
     pcPickIMG.src=InformationPlay[pc]
-
     pcPickIMG.attributes[1].textContent=pc
     
 
