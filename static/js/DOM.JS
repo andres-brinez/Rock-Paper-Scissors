@@ -1,0 +1,7 @@
+const options = document.querySelectorAll('.pick-one')
+const wrapper = document.querySelector('.wrapper')
+const Containerwinner = document.querySelector('.winner')
+const winnerTitle= document.querySelector('.winnerTitle')
+const btnAgain= document.querySelector('.play-again')
+const playerPickIMG= document.querySelector('.your-pick img')
+const pcPickIMG= document.querySelector('.computer-pick img ')
