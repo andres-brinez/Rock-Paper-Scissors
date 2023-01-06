@@ -33,13 +33,19 @@ li.pick-one button {
     background: none;
     border: 2px solid black;
     font-family: 'Roboto Mono', monospace;
-    height: 290px;
-    width: 266px;
+    height: 400px;
+    width: 350px;
     font-size: 1.25rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+li.pick-one button p {
+    font-size: 1.9rem;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 li.pick-one button:hover {
@@ -49,9 +55,10 @@ li.pick-one button:hover {
 }
 
 li.pick-one img {
-    max-height: 180px;
-    max-width: 180px;
+    max-height: 260px;
+    max-width: 290px;
 }
+
 
 
 
