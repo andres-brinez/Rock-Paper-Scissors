@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
 
 body {
-    /* min-height: 100vh; */
     font-family: 'Roboto Mono', monospace;
     margin: 0;
     padding: 0;
@@ -18,13 +17,11 @@ h1 {
 
 ul {
     justify-content: center;
-
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 75px;
-    /* separación entre contenedores */
+    gap: 75px;     /* separación entre contenedores */
 }
 
 
@@ -50,7 +47,6 @@ li.pick-one button p {
 
 li.pick-one button:hover {
     cursor: pointer;
-
     border: 10px solid #FFB800;
 }
 
@@ -66,7 +62,6 @@ li.pick-one img {
 .winner.you-win {
     background: url('../images/background-you-win.svg') left top no-repeat;
     background-size: auto 100%;
-    min-height: 100vh;
 }
 
 .winner.computer-wins {
@@ -90,6 +85,7 @@ li.pick-one img {
 
 .winner img {
     mix-blend-mode: multiply;
+    /* describe cómo el contenido de un elemento debe mezclarse con el contenido del elemento que está tras él y con el fondo del elemento. */
     
 }
 
