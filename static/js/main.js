@@ -8,19 +8,20 @@ const InformationPlay={
 }
 
 
+// Cuando se de cick  sobre alguna opción
 options.forEach(option => {
     option.addEventListener('click', () => {
 
         const jugadaComputer=jugadas[Math.floor(Math.random()*jugadas.length)]
 
-        alert(` You${option.outerText} 
-        pc ${jugadaComputer}`)
-
         winner(jugadaComputer,option.outerText)
+
+
     })
 })
 
 function winner(pc,player){
+
 
     let winner = ''
 
@@ -31,7 +32,7 @@ function winner(pc,player){
 
     else if(pc==='Rock'){
         if(player==='Paper'){
-            winner= 'player'
+            winner='player'
         }else{
             winner='pc'
         }
@@ -39,19 +40,24 @@ function winner(pc,player){
 
     else if(pc==='Paper'){
         if(player==='Scissors'){
-            winner= 'Player'
+            winner='Player'
         }else{
-            winner= 'pc'
+            winner='pc'
         }
     }
 
 
     else if(pc==='Scissors'){
         if(player==='Rock'){
-            return 'player'
+            winner= 'player'
         }else{
-            return 'pc'
+            winner='pc'
         }
+    
+    }
+
+    else {
+        alert('error')
     }
 
     showResult(winner,player,pc)
@@ -60,6 +66,7 @@ function winner(pc,player){
 }
 
 function showResult(winner,player,pc){
+
     
 
     wrapper.classList.add('oculto')
@@ -82,9 +89,6 @@ function showResult(winner,player,pc){
 
 
 
-    console.log(player)
-    console.log(InformationPlay[player])
-
     playerPickIMG.src=InformationPlay[player]
     playerPickIMG.attributes[1].textContent=player
 
@@ -102,13 +106,7 @@ function showResult(winner,player,pc){
 
     })
 
-    // const result = document.querySelector('.result')
-    // result.innerHTML = `
-    // <h1 class="${winner}">${winner}</h1>
-    // <button class="play-again">Play Again</button>
-    // `
-
-
+    
 }
 
 
