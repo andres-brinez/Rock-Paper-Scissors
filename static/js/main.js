@@ -12,6 +12,7 @@ options.forEach(option => {
 
         const jugadaComputer=jugadas[Math.floor(Math.random()*jugadas.length)]
 
+        // Cuando la página se traduce tambien lo hace el texto de outerText, lo que hace que genere errores  
         Selectwinner(jugadaComputer,option.outerText)
 
     })
@@ -72,6 +73,7 @@ function showResult(winner,player,pc){
 
     // Agrega las  imágenes
 
+    console.log(InformationPlay[player])
     playerPickIMG.src=InformationPlay[player]
     playerPickIMG.attributes[1].textContent=player
 
